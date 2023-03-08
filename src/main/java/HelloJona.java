@@ -5,11 +5,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/hello")
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet("/jona")
+public class HelloJona extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)  throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  throws IOException{
         PrintWriter out = response.getWriter();
-        out.println("<h1>Hello sexy!</h1>");
+        out.println("<h1>HELLO JONA</h1><br><h2>Growth Mindset!<h2>");
     }
 }
