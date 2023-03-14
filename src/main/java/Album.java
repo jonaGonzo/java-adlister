@@ -1,9 +1,21 @@
-public class Album {
-   String artist;
-   String name;
-   int release_date;
-   float sales;
-   String genre;
+import java.io.Serializable;
+
+public class Album implements Serializable {
+    private int id;
+    private String artist;
+    private  String name;
+    private  int release_date;
+    private double sales;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private String genre;
 
 
     public String getArtist() {
@@ -30,11 +42,11 @@ public class Album {
         this.release_date = release_date;
     }
 
-    public float getSales() {
+    public double getSales() {
         return sales;
     }
 
-    public void setSales(float sales) {
+    public void setSales(double sales) {
         this.sales = sales;
     }
 
@@ -49,7 +61,8 @@ public class Album {
     public Album(){
     };
 
-    public Album(String artist, String name, int release_date, float sales, String genre) {
+    public Album(String artist, String name, int release_date, double sales, String genre) {
+
         this.artist = artist;
         this.name = name;
         this.release_date = release_date;

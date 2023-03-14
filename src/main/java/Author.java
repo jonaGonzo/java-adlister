@@ -1,4 +1,6 @@
-public class Author {
+import java.io.Serializable;
+
+public class Author implements Serializable {
     protected String name;
 
     public String getName() {

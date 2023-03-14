@@ -1,13 +1,16 @@
-public class Quote {
-    protected String author;
+import java.io.Serializable;
+
+public class Quote implements Serializable {
+    protected Author author;
 
     protected String quote;
 
-    public String getAuthor() {
+
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
@@ -23,7 +26,7 @@ public class Quote {
 
     };
 
-    public Quote(String author, String quote) {
+    public Quote(Author author, String quote) {
         this.author = author;
         this.quote = quote;
     }
