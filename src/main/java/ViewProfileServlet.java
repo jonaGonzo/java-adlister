@@ -8,6 +8,12 @@ import java.io.IOException;
 @WebServlet(name = "ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/profile.jsp").forward(request, response);
+//        check to see if the user has a user cookie in this browser
+
+        if (request.getSession().getAttribute("user") != null) {
+            request.getRequestDispatcher("/WEB-INF/ads/profile.jsp").forward(request, response);
+        } else {
+            response.sendRedirect("/logout");
+        }
     }
 }
